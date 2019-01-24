@@ -52,6 +52,9 @@ function rematch() {
 
     } else {
         console.log("Your cowardice surprises me.");
+        wins = 0;
+        playerhp = 40;
+        granthp = 10;
         return startgame();        
     }   
 }
