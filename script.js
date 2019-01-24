@@ -44,15 +44,30 @@ function gethealth() {
 }
 
 function rematch() {
-    let alpha = prompt("Do you want to attack or quit?");
-    if (alpha === "attack") {
-        console.log(`${playerName} eats a powerbar and adds health: ${playerhp += gethealth()}`);
+    let replay = prompt("Do you want to attack or quit?");
+    if (replay === "attack") {
+        console.log(`${playerName} shouts "It's only a flesh wound!" and adds health: ${playerhp             += gethealth()}`);
         console.log(`Grant summons strength and adds health: ${granthp += gethealth()}`);
         startcombat();
+
     } else {
-        console.log("Chicken!")
+        console.log("Your cowardice surprises me.");
+        return startgame();        
     }   
 }
+
+// function rematch() {
+//     let replay = prompt("Do you want to attack or quit?");
+//     if (replay !== "attack") {
+//         console.log("Your cowardice surprises me.");
+//         break;
+
+//     } else (replay === "attack") {
+//         console.log(`${playerName} shouts "It's only a flesh wound!" and adds health: ${playerhp += gethealth()}`);
+//         console.log(`Grant summons strength and adds health: ${granthp += gethealth()}`);
+//         startcombat();
+//     }   
+// }
 
 startgame();
 
